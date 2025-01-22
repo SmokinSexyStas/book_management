@@ -16,7 +16,7 @@
     <header>
       <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href='..'>Book management</a>
+          <a class="navbar-brand" href='/book_management'>Book management</a>
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
