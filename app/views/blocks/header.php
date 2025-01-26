@@ -1,3 +1,15 @@
+<?php 
+if (isset($_SESSION['admin_id']) && strlen($_SESSION['admin_id']) != 0) {
+    $login_logout = '/logout';
+    $text = 'Log out';
+    $button_color = 'text-danger';
+} else {
+  $login_logout = '/login';
+  $text = 'Log in';
+  $button_color = '';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,25 +22,26 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="stylesheet" href=<?=$_SERVER['DOCUMENT_ROOT']."/public/css/main.css"?> />
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header>
       <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href='/book_management'>Book management</a>
-          <form class="d-flex" role="search">
+          <a class="navbar-brand" href='/'>Book management</a>
+          <form class="d-flex" role="search" action="">
             <input
               class="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
+              name="search"
             />
             <button class="btn btn-outline-success" type="submit">
               Search
             </button>
           </form>
-          <a class="d-flex">Log in</a>
+          <a class="d-flex <?=$button_color?>" href="<?=$login_logout?>"><?=$text?></a>
         </div>
       </nav>
     </header>
