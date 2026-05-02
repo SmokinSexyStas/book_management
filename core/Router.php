@@ -21,7 +21,7 @@ class Router {
     }
 
     private function callAction($controller, $action) {
-        require_once $_SERVER['DOCUMENT_ROOT'] . "/app/controllers/$controller.php";
+        require_once $_SERVER['DOCUMENT_ROOT'] . "/../app/controllers/$controller.php";
         $controllerObj = new $controller();
         if (method_exists($controllerObj, $action)) {
             $controllerObj->$action();

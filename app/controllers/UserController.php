@@ -27,7 +27,7 @@ class UserController extends BaseController {
                 $errorMsg = 'Wrong login or password';
             }
         }
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/app/views/login.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/../app/views/login.php';
     }
 
     public function logout() {

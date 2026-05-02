@@ -8,7 +8,7 @@ class Db{
 
     private function __construct() {
         try{
-            $this->pdo = new \PDO("mysql:host=localhost;dbname=book_management_system", 'root', '');
+            $this->pdo = new \PDO("mysql:host=db;dbname=book_management_system", 'root', 'root');
         } catch(PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }

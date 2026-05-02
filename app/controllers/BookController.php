@@ -33,7 +33,7 @@ class BookController extends BaseController {
 
         $genres = Book::getAllGenres();
 
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/app/views/add_book.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/../app/views/add_book.php';
     }
 
     public function updateBook() {
@@ -80,7 +80,7 @@ class BookController extends BaseController {
 
         $genres = Book::getAllGenres();
 
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/app/views/add_book.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/../app/views/add_book.php';
     }
 
     public function deleteBook() {

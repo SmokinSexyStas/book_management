@@ -18,6 +18,6 @@ class HomeController extends BaseController {
             $success_message = '';
         }
 
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/app/views/index.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/../app/views/index.php';
     }
 }
